@@ -16,10 +16,10 @@
 ## Anggota kelompok
 
 | Nama | NIM | Username GitHub | Kontribusi utama |
-|---|---|---|---|
-| ✍️ | ✍️ | ✍️ | ✍️ misal: menjalankan eksperimen, menulis Bagian 3 |
-| ✍️ | ✍️ | ✍️ | ✍️ |
-| ✍️ | ✍️ | ✍️ | ✍️ |
+|---|---|---|
+| Reyhand Shevanco | 123430114 | Reyhand-del | Menjalankan eksperimen, membuat repository |
+| M.Fadhil Ananta Putra | 123430085 | Fadhil085 | Menuliskan Bagian 3 |
+| Falih Akbar | 123430111 | xxx | ✍️ |
 
 ## 1. Pertanyaan
 
@@ -44,8 +44,8 @@ Augmentasi apa yang membantu U-Net menemukan polip pada citra kolonoskopi, dan a
 | Skenario | Augmentasi (kode) | Alasan klinis | Hipotesis: Dice naik/turun/sama? |
 |---|---|---|---|
 | Tanpa augmentasi | — | Pembanding | — |
-| ✍️ | ✍️ `v2....` | ✍️ | ✍️ |
-| ✍️ | ✍️ `v2....` | ✍️ | ✍️ |
+| Geometri | "Geometri (Flip)": v2.Compose([v2.RandomHorizontalFlip(p=0.5),v2.RandomVerticalFlip(p=0.5),]) | Kamera endoskop berputar di dalam usus sehingga posisi polip bisa tampak terbalik tanpa mengubah bentuk aslinya | Dice naik |
+| Color Jitter | "Warna Ekstrem (ColorJitter)": v2.ColorJitter( brightness=0.4, contrast=0.4 saturation=0.4, hue=0.2) | Polip dibedakan dari dinding usus berdasarkan warna kemerahannya; perubahan warna ekstrem mengaburkan ciri jaringan ini | Dice turun |
 
 Contoh augmentasi yang dicoba:
 
