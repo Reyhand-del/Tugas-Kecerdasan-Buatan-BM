@@ -16,7 +16,7 @@
 ## Anggota kelompok
 
 | Nama | NIM | Username GitHub | Kontribusi utama |
-||---|---|---|
+|---|---|---|
 | Reyhand Shevanco | 123430114 | Reyhand-del | Menjalankan eksperimen, membuat repository |
 | M.Fadhil Ananta Putra | 123430085 | Fadhil085 | Menuliskan Bagian 3 |
 | Falih Akbar | 123430111 | xxx | ✍️ |
