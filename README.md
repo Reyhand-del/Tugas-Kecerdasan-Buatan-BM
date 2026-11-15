@@ -45,7 +45,7 @@ Augmentasi apa yang membantu U-Net menemukan polip pada citra kolonoskopi, dan a
 |---|---|---|---|
 | Tanpa augmentasi | — | Pembanding | — |
 | Geometri | "Geometri (Flip)": v2.Compose([v2.RandomHorizontalFlip(p=0.5),v2.RandomVerticalFlip(p=0.5),]) | Penggunaan kamera endoskopi dapat berputar di dalam usus sehingga region polip dapat terbalik dari kondisi aslinya, sehingga augmentasi geometri diperlukan untuk meningkatkan hasil diagnosis yang lebih baik | Dice naik |
-| Color Jitter | "Warna Ekstrem (ColorJitter)": v2.ColorJitter( brightness=0.4, contrast=0.4 saturation=0.4, hue=0.2) | Polip dibedakan dari dinding usus berdasarkan warna kemerahannya; perubahan warna ekstrem mengaburkan ciri jaringan ini | Dice turun |
+| Color Jitter | "Warna Ekstrem (ColorJitter)": v2.ColorJitter( brightness=0.4, contrast=0.4 saturation=0.4, hue=0.2) | Penggunaan color jitter pada deteksi tumor atau polip memfokuskan pada morfologi struktur sel tumor dibandingkan aspek warna atau pencahayaan konvensional  | Dice turun |
 
 Contoh augmentasi yang dicoba:
 
