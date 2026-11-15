@@ -90,9 +90,9 @@ Kenaikan skor pada sampel spesifik di peta kesalahan (misalnya dari 0.09 ke 0.47
 
 <!-- Siapa mengerjakan apa. Penilaian proses kerja dilihat dari riwayat commit tiap anggota. -->
 
-Reyhand Shevanco > Menjalankan eksperimen, membuat repository.
-M.Fadhil Ananta Putra > Menuliskan Bagian 3, 4, 5.
-M. Falih Akbar > Membantu Analisis dan Evaluasi untuk bagian 4, 5, dan 6, dengan bantuan AI.
+- Reyhand Shevanco > Menjalankan eksperimen, membuat repository.
+- M.Fadhil Ananta Putra > Menuliskan Bagian 3, 4, 5.
+- M. Falih Akbar > Membantu Analisis dan Evaluasi untuk bagian 4, 5, dan 6, dengan bantuan AI.
 
 ## 8. Penggunaan AI
 
@@ -116,4 +116,5 @@ Atau buka notebook di Google Colab (Runtime → Change runtime type → T4 GPU).
 
 - Jha, D., dkk. (2020). Kvasir-SEG: A Segmented Polyp Dataset. *MultiMedia Modeling (MMM 2020)*, 451–462.
 - Ronneberger, O., Fischer, P., & Brox, T. (2015). U-Net: Convolutional Networks for Biomedical Image Segmentation. *MICCAI*. arXiv:1505.04597.
-- ✍️ tambahkan referensi lain yang kalian pakai
+- Jha, D., dkk. (2019). ResUNet++: An Advanced Architecture for Medical Image Segmentation. 2019 IEEE International Symposium on Multimedia (ISM), 225–230.
+- Rafi, W. H., Sulistiyo, M. D., Hadiyoso, S., & Wisesty, U. N. (2023). Polyp Identification from a Colonoscopy Image Using Semantic Segmentation Approach. Building of Informatics, Technology and Science (BITS), 5(2), 423–431.
