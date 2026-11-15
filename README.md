@@ -72,22 +72,27 @@ Contoh augmentasi yang dicoba:
      Pertanyaan pemandu: Polip seperti apa yang sering terlewat (kecil? datar? warna mirip dinding usus?)
      Apa yang sering dikira polip padahal bukan? Apakah augmentasi memperbaiki kasus sulit? -->
 
-Berdasarkan peta kesalahan (error map), hasil segmentasi menunjukkan bahwa area hijau (true positive) mendominasi polip yang menonjol dengan batas tegas, sementara area biru (false negative) banyak muncul pada polip berukuran sangat kecil maupun polip datar yang warnanya menyatu dengan dinding usus. Di sisi lain, area merah (false positive) tersebar luas pada lipatan mukosa (haustral folds) dan pantulan cahaya cairan yang secara visual menyerupai polip. Penerapan augmentasi data—khususnya Color Jitter—terbukti efektif menggeser dominasi warna biru menjadi hijau pada kasus-kasus sulit tersebut, meskipun masih menyisakan sedikit area merah akibat sensitivitas model terhadap variasi tekstur jaringan normal.
+Visualisasi peta kesalahan (*error map*) memperlihatkan bahwa model U-Net berhasil mendeteksi polip bertangkai atau menonjol dengan batas tegas secara optimal, ditandai oleh dominasi area hijau (*true positive*). Sebaliknya, area biru (*false negative*) cenderung terkonsentrasi pada lesi datar (*flat/sessile*) serta polip berukuran mikro yang gradasi warnanya menyatu dengan mukosa dinding usus, sehingga luput dari segmentasi. Sementara itu, area merah (*false positive*) kerap terdistribusi di sekitar lipatan dinding kolon (*haustral folds*) dan area pantulan kilau cahaya endoskop (*specular reflection*) yang menyerupai kontur jaringan polip. Meskipun manipulasi kontras dan saturasi (*Color Jitter*) pada beberapa sampel spesifik mampu mengonversi area biru menjadi hijau (menangkap lesi yang samar), teknik ini rentan memperluas persebaran area merah akibat meningkatnya sensitivitas model terhadap variasi warna dan tekstur mukosa sehat.
 
 ## 6. Pembahasan & kesimpulan
 
 <!-- Bandingkan hasil dengan hipotesis di Bagian 3. Hipotesis yang ternyata salah tetap bernilai,
      asalkan dijelaskan kenapa. Perbedaan kecil (lebih kecil dari simpangan baku) belum tentu berarti. -->
 
-Perbandingan antara data kuantitatif keseluruhan dan visualisasi kualitatif menunjukkan bahwa hasil evaluasi agregat pada 200 citra uji justru membenarkan hipotesis awal sepenuhnya. Pada skenario Geometri, rata-rata skor Dice meningkat signifikan melampaui batas simpangan baku dari 0.584 ± 0.025 menjadi 0.631 ± 0.046, membuktikan efektivitas invarian rotasi endoskop. Sebaliknya, pada skenario Color Jitter, rata-rata skor Dice keseluruhan mengalami penurunan tajam menjadi 0.484 ± 0.073 dengan variabilitas tinggi antar-ulangan (0.385–0.558), yang mengonfirmasi hipotesis bahwa distorsi warna ekstrem merusak fitur klinis kemerahan polip dan memperluas false positive secara global. Adapun kenaikan skor pada peta kesalahan sebelumnya (0.09 dan 0.47) merupakan fenomena kasus lokal pada sampel spesifik berbatas kabur, bukan cerminan performa rata-rata model di seluruh dataset uji.
+Evaluasi komparatif antara capaian kuantitatif dan inspeksi kualitatif pada 200 citra uji secara konsisten memvalidasi hipotesis awal:
+
+1. **Augmentasi Geometri (*Flip*) terbukti menguntungkan:** Rata-rata skor Dice meningkat signifikan dari 0.584 ± 0.025 (tanpa augmentasi) menjadi 0.631 ± 0.046, dengan peningkatan skor IoU dari 0.467 menjadi 0.524. Kenaikan yang melampaui rentang simpangan baku ini mengonfirmasi relevansi klinisnya: pergerakan dan rotasi kamera endoskop di dalam rongga usus menuntut model memiliki invariansi spasial terhadap orientasi tanpa merusak integritas morfologi lesi.
+2. **Augmentasi Warna Ekstrem (*Color Jitter*) merugikan segmentasi:** Performa model terdegradasi tajam dengan penurunan rata-rata skor Dice ke angka 0.484 ± 0.073 serta deviasi yang tinggi antar-ulangan (0.385–0.558). Temuan ini membuktikan bahwa perubahan drastis pada kecerahan, saturasi, dan corak (*hue*) justru mengaburkan fitur pembeda utama polip, yakni vaskularisasi dan eritema (rona kemerahan alami terhadap mukosa normal). Akibatnya, model mengalami peningkatan *false positive* secara global pada lipatan dinding usus.
+
+Kenaikan skor pada sampel spesifik di peta kesalahan (misalnya dari 0.09 ke 0.47) hanyalah fenomena lokal pada kasus berbatas lesi ambigu, bukan representasi performa generalisasi model secara keseluruhan. Dengan demikian, augmentasi geometri sangat direkomendasikan untuk segmentasi polip kolonoskopi, sedangkan perturbasi warna intensitas tinggi sebaiknya dihindari atau dibatasi pada rentang yang konservatif.
 
 ## 7. Pembagian kerja
 
 <!-- Siapa mengerjakan apa. Penilaian proses kerja dilihat dari riwayat commit tiap anggota. -->
 
-Reyhand Shevanco > Menjalankan eksperimen, membuat repository
-M.Fadhil Ananta Putra > Menuliskan Bagian 3, 4, 5
-M. Falih Akbar > Membantu Analisis dan Evaluasi untuk bagian 4, 5, dan 6, dengan bantuan AI
+Reyhand Shevanco > Menjalankan eksperimen, membuat repository.
+M.Fadhil Ananta Putra > Menuliskan Bagian 3, 4, 5.
+M. Falih Akbar > Membantu Analisis dan Evaluasi untuk bagian 4, 5, dan 6, dengan bantuan AI.
 
 ## 8. Penggunaan AI
 
