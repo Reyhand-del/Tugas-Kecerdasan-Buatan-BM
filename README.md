@@ -18,8 +18,8 @@
 | Nama | NIM | Username GitHub | Kontribusi utama |
 |---|---|---|---|
 | Reyhand Shevanco | 123430114 | Reyhand-del | Menjalankan eksperimen, membuat repository |
-| M.Fadhil Ananta Putra | 123430085 | Fadhil085 | Menuliskan Bagian 3 |
-| Falih Akbar | 123430111 | xxx | ✍️ |
+| M.Fadhil Ananta Putra | 123430085 | Fadhil085 | Menuliskan Bagian 3, 4, 5 |
+| M. Falih Akbar | 123430111 | Kelibear | Membantu Analisis dan Evaluasi untuk bagian 4, 5, dan 6, dengan bantuan AI |
 
 ## 1. Pertanyaan
 
@@ -85,7 +85,9 @@ Perbandingan antara data kuantitatif keseluruhan dan visualisasi kualitatif menu
 
 <!-- Siapa mengerjakan apa. Penilaian proses kerja dilihat dari riwayat commit tiap anggota. -->
 
-✍️
+Reyhand Shevanco > Menjalankan eksperimen, membuat repository
+M.Fadhil Ananta Putra > Menuliskan Bagian 3, 4, 5
+M. Falih Akbar > Membantu Analisis dan Evaluasi untuk bagian 4, 5, dan 6, dengan bantuan AI
 
 ## 8. Penggunaan AI
 
@@ -93,7 +95,8 @@ Perbandingan antara data kuantitatif keseluruhan dan visualisasi kualitatif menu
      Contoh: "Claude Code (CLI) untuk menulis skenario augmentasi dan memperbaiki error di Bagian 4.
      Draf Bagian 6 ditulis sendiri, lalu dirapikan bahasanya dengan bantuan AI." -->
 
-✍️
+Antigravity (CLI) untuk membantu menganalisis di bagian 4. 
+Dan membantu memparafrase draf bagian 5 dan 6.
 
 ## Cara menjalankan ulang
 
